@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const Textform = () => {
     
-    const [textIn, setTextIn] = useState("Click on an option to see THIS result")
+    const [textIn, setTextIn] = useState("Type Your text Here")
 
     const [textOut, setTextOut] = useState("")
 
