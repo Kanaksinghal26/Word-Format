@@ -1,8 +1,14 @@
+import { color } from '@mui/system'
 import React, { useState } from 'react'
 
 const Textform = () => {
     
     const [textIn, setTextIn] = useState("Type Your text Here")
+
+    // const [myStyle, setMyStyle] = useState({
+    //     background-color : "red",
+    //     color : "black"
+    // })
 
     const [textOut, setTextOut] = useState("")
 
@@ -78,6 +84,8 @@ const Textform = () => {
             setTextOut("NO")
         }
     }
+
+    
     return (
         <div className='container my-3'>
             <textarea className="form-control" value={textIn} onChange={handleOnChange} id="mybox" rows="8"></textarea>
@@ -88,8 +96,11 @@ const Textform = () => {
             <butoon className="btn btn-primary my-3 mx-4" onClick={handleWordCounter}> WordCount    </butoon>
             <butoon className="btn btn-primary my-3 mx-4" onClick={handleLargestWord}> LargestWord    </butoon>
             <butoon className="btn btn-primary my-3 mx-4" onClick={handleIsPalindrome}> IsPalindrome    </butoon>
-            <textarea class="form-control" value={textOut} id="exampleFormControlTextarea3" rows="7"></textarea>
-
+            <textarea className="form-control" value={textOut} id="exampleFormControlTextarea3" rows="7"></textarea>
+            {/* <div className="form-check form-switch my-3">
+                <input className="form-check-input" type="checkbox" onClick={handleStyle} role="switch" id="flexSwitchCheckDefault" />
+                <label className="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
+            </div> */}
         </div>
     )
 }
